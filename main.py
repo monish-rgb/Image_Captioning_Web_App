@@ -28,8 +28,9 @@ model = genai.GenerativeModel(
 
 @app.get('/')
 def index():
-    html_form="""<form method="post" enctype="multipart/form-data" action="/upload" method="post" style="background-color:powderblue;">
-    
+    html_form="""
+    <body style="background-color:powderblue;">
+    <form method="post" enctype="multipart/form-data" action="/upload" method="post">
   <div>
     <label for="file">Choose file to upload</label>
     <input type="file" id="file" name="form_file" accept="image/jpeg"/>
