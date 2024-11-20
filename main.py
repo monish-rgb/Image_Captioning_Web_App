@@ -45,7 +45,7 @@ def index():
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-color: #f4f4f9;
+            background-color: powderblue;
             color: #333;
         }
         h1 {
