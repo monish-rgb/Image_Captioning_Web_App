@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #444;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        h4 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .caption, .description {
+            text-align: center;
+            color: #555;
+        }
+        .caption {
+            font-style: italic;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-  <h1>Image Name:  {{ title }}</h1>
-  <img src="{{image_src}}" alt="{{ title }}" width="650" height="400">
-  <h4>Caption: {{caption}}</h4>
-  <h4>Description: {{description}}</h4>
+    <div class="container">
+        <h1>Image Name: {{ title }}</h1>
+        <img src="{{ image_src }}" alt="{{ title }}">
+        <h4>Caption:</h4>
+        <p class="caption">{{ caption }}</p>
+        <h4>Description:</h4>
+        <p class="description">{{ description }}</p>
+    </div>
 </body>
 </html>
